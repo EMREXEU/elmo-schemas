@@ -6,9 +6,9 @@
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:ewpAddress="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1">
-  <xs:import namespace="https://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2001/03/xml.xsd" />
-  <xs:import namespace="https://www.w3.org/2000/09/xmldsig#" schemaLocation="https://raw.githubusercontent.com/emrex-eu/elmo-schemas/v2/references/xmldsig-core-schema.xsd" />
-  <xs:import namespace="https://europass.cedefop.europa.eu/Europass/V2.0" schemaLocation="https://raw.githubusercontent.com/emrex-eu/elmo-schemas/v2/references/EUROPASS_ISOCountries_V1.1.xsd" />
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2001/03/xml.xsd" />
+  <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="https://raw.githubusercontent.com/emrex-eu/elmo-schemas/v2/references/xmldsig-core-schema.xsd" />
+  <xs:import namespace="http://europass.cedefop.europa.eu/Europass/V2.0" schemaLocation="https://raw.githubusercontent.com/emrex-eu/elmo-schemas/v2/references/EUROPASS_ISOCountries_V1.1.xsd" />
   <xs:import namespace="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1" schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-types-address/stable-v1/schema.xsd" />
   <xs:annotation>
     <xs:documentation>
@@ -271,7 +271,7 @@
                   </xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="alternativeName">
+              <xs:element minOccurs="0" name="alternativeName">
                 <xs:annotation>
                   <xs:documentation>
                     The full name of the learner written in non latin alphabet.
@@ -284,7 +284,7 @@
                     </xs:extension>
                   </xs:simpleContent>
                 </xs:complexType>
-              </xs:element> 
+              </xs:element>
               <xs:element minOccurs="0" name="dateOfBirth" type="xs:date">
                 <xs:annotation>
                   <xs:documentation>
@@ -567,11 +567,11 @@
                           </xs:enumeration>
                           <xs:enumeration value="ERROR_TEMPORARY">
                             <xs:annotation>
-                            <xs:documentation>
-                            An error has occured that causes the EMP to not be able to collect and deliver
-                            any data. This error is of a temporary nature and the complete data set is
-                            expected to be delivered once the system recovers.
-                            </xs:documentation>
+                              <xs:documentation>
+                                An error has occured that causes the EMP to not be able to collect and deliver
+                                any data. This error is of a temporary nature and the complete data set is
+                                expected to be delivered once the system recovers.
+                              </xs:documentation>
                             </xs:annotation>
                           </xs:enumeration>
                           <xs:enumeration value="ERROR_PERMANENT">
@@ -946,13 +946,15 @@
        <xs:complexType>
          <xs:simpleContent>
            <xs:extension base="xs:token">
-             <xs:attribute name="type" type="xs:token" use="required">
+             <xs:attribute name="type" type="xs:token">
                <xs:annotation>
                  <xs:documentation>
                    These are the currently supported country code types:
  
                    ISO – ISO-3166-alpha-2 code
                    URI – the URI link to the EC Countries and territories schema
+
+                   If the 'type' attribute is not present, the default interpretation is ISO-3166-alpha-2.
                  </xs:documentation>
                </xs:annotation>
              </xs:attribute>
