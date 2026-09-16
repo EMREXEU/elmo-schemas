@@ -40,7 +40,134 @@ Important notes:
             <title xml:lang="en">University of Warsaw</title>
             <url>http://www.uw.edu.pl</url>
         </issuer>
-        <learningOpportunitySpecification>
+
+       <!-- Example of a Degree with Diploma Supplement -->
+       <learningOpportunitySpecification>
+			<identifier type="local">MNM2-BIO</identifier>
+			<identifier type="elmo">461727197642599</identifier>
+			<identifier type="nus">751909</identifier>
+			<title xml:lang="no">Master i biologi</title>
+			<title xml:lang="en">Master of Science in Biology</title>
+			<type>Degree Programme</type>
+			<iscedCode>0511</iscedCode>
+			<url>http://www.uio.no/studier/program/biologi-master/</url>
+			<specifies>
+				<learningOpportunityInstance>
+					<start>2009-01-15</start>
+					<date>2009-06-15</date>
+					<academicTerm>
+						<title xml:lang="no">2009 Vår</title>
+						<title xml:lang="nn">2009 Vår</title>
+						<title xml:lang="en">2009 Spring</title>
+						<start>2009-01-15</start>
+						<end>2009-06-15</end>
+					</academicTerm>
+					<credit>
+						<scheme>ECTS</scheme>
+						<level>Master</level>
+						<value>120</value>
+					</credit>
+
+					<diplomaSupplement xml:lang="en">
+						<version>2018</version>
+						<issueDate>2018-09-07</issueDate>
+						<introduction></introduction>
+						<section number="2">
+							<title>Information identifying the qualification</title>
+							<section number="2.3">
+								<title>Name and status of awarding institution (in original language)</title>
+								<content>Master i biologi</content>
+								<additionalInformation>Master is a protected title in Norway</additionalInformation>
+							</section>
+							<section number="2.5">
+								<title>Language(s) of instruction/examination</title>
+								<content>Mainly Swedish</content>
+							</section>
+						</section>
+						<section number="3">
+							<title>Information on the level of the qualification</title>
+							<section number="3.1">
+								<title>Level of qualification</title>
+								<content>Master's degree</content>
+								<additionalInformation>Second-cycle university degree. See 8.</additionalInformation>
+							</section>
+							<section number="3.2">
+								<title>Official length of programme</title>
+								<content>48 months / 240 ECTS credits</content>
+							</section>
+						</section>
+						<section number="4">
+							<title>Information on the content and results gained</title>
+							<section number="4.2">
+								<title>Programme requirements</title>
+								<content type="html"><![CDATA[
+									MHTML document here?
+								]]></content>
+								<attachment>
+									<content xml:lang="en">data:application/pdf;base64,iiNhz6QfDnnDybjHLBF2...</content>
+								</attachment>
+							</section>
+							<section number="4.3">
+								<title>Programme details</title>
+								<content><![CDATA[
+									HTML text here
+								]]></content>
+							</section>
+						</section>
+						<section number="7">
+							<title>Certification of the supplement</title>
+							<section number="7.1">
+								<title>Date</title>
+								<content>7 September 2018</content>
+							</section>
+							<section number="7.2">
+								<title>Signature</title>
+								<content>Vice Rector Ola Nordmann</content>
+							</section>
+							<section number="7.3">
+								<title>Capacity</title>
+								<content>On behalf of the Examination Board</content>
+							</section>
+						</section>
+						<section number="8">
+							<title>Description of national education system</title>
+							<content><![CDATA[
+								HTML text here
+							]]></content>
+							<attachment>
+								<content xml:lang="en">data:application/pdf;base64,iiNhz6QfDnnDybjHLBF2...</content>
+							</attachment>
+						</section>
+					</diplomaSupplement>
+				</learningOpportunityInstance>
+			</specifies>
+			<hasPart>
+				<learningOpportunitySpecification>
+					<identifier type="local">EKSTERN</identifier>
+					<identifier type="elmo">457188157965887</identifier>
+					<title xml:lang="no">Identifying ectomycorrhizal fungi (KÃ¸benhavns Universitet)</title>
+					<title xml:lang="en">Identifying ectomycorrhizal fungi (University of Copenhagen)</title>
+					<type>Course</type>
+					<specifies>
+						<learningOpportunityInstance>
+							<academicTerm>
+								<title xml:lang="no">2007 HÃ¸st</title>
+								<title xml:lang="nn">2007 Haust</title>
+								<title xml:lang="en">2007 Autumn</title>
+								<start>2010-01-15</start>
+								<end>2010-07-02</end>
+							</academicTerm>
+							<resultLabel>Innpasset</resultLabel>
+							<credit>
+								<scheme>ECTS</scheme>
+								<value>15</value>
+							</credit>
+						</learningOpportunityInstance>
+					</specifies>
+				</learningOpportunitySpecification>
+			</hasPart>
+		</learningOpportunitySpecification>
+       <learningOpportunitySpecification>
             <identifier type="local">1000-217bMRJ</identifier>
             <title xml:lang="pl">Budowa kompilatorów</title>
             <title xml:lang="en">Compiler construction</title>
@@ -50,12 +177,22 @@ Important notes:
             <url>http://example.com/</url>
             <description xml:lang="en">This can contain a multiline description.
 
-This element is of the PlaintextMultilineStringWithOptionalLang type. All description elements are of this type. And this means that EMREX Clients are required to respect its multiline formatting.
+This element is of the PlaintextMultilineStringWithOptionalLang type. All description elements are of this type. And this means that clients are required to respect its multiline formatting.
 
-NCP implementers can add line breaks (or double line breaks) within this element, and such line breaks should be displayed properly by all the EMREX Clients. However, HTML is not allowed here.
+Server implementers can add line breaks (or double line breaks) within this element, and such line breaks should be displayed properly by all the clients. However, HTML is not allowed here.
 </description>
             <description xml:lang="pl">(more descriptions in different languages)</description>
             <description xml:lang="no">(more descriptions in different languages)</description>
+            <descriptionHtml xml:lang="en">
+                &lt;p&gt;While the regular &lt;code&gt;&amp;lt;description&amp;gt;&lt;/code&gt;
+                elements don&apos;t allow HTML, this one does.&lt;/p&gt;
+
+                &lt;p&gt;Note, that the "double-escaping" you see in the above paragraphs is
+                completely valid. Whenever you output characters such as the "less than" sign,
+                they are first HTML-escaped (because it's HTML you are providing here), and
+                later they're also XML-escaped (because you are embedding the escaped HTML
+                value in an XML element).&lt;/p&gt;
+            </descriptionHtml>
             <specifies>
                 <learningOpportunityInstance>
                     <start>2014-10-01</start>
@@ -65,6 +202,8 @@ NCP implementers can add line breaks (or double line breaks) within this element
                         <start>2014-10-01</start>
                         <end>2015-02-15</end>
                     </academicTerm>
+                    <status>passed</status>
+                    <gradingSchemeLocalId>0-100</gradingSchemeLocalId>
                     <resultLabel>45.1</resultLabel>
                     <shortenedGrading>
                         <percentageLower>62.3</percentageLower>
@@ -82,14 +221,28 @@ NCP implementers can add line breaks (or double line breaks) within this element
                         <category count="198" label="40-59.9"/>
                         <category count="35" label="60-79.9"/>
                         <category count="7" label="80-100"/>
-                        <description>Some extra information about the description, might include links etc.</description>
+                        <description xml:lang="en">Some extra information about the description, might include links etc.</description>
+                        <description xml:lang="pl">Po polsku...</description>
                     </resultDistribution>
                     <credit>
                         <scheme>ects</scheme>
                         <level>Bachelor</level> <!-- level is optional! -->
                         <value>6</value>
                     </credit>
+                    <!-- All consumers of ELMO should support EQF -->
+                    <level>
+                        <type>EQF</type>
+                        <description>European Qualification Framework</description>
+                        <value>5</value>
+                    </level>
+                    <!-- This level will be ignored by consumers who do not support it. It is not required to support. -->
+                    <level>
+                        <type>NQF</type>
+                        <description>Norwegian Qualification Framework</description>
+                        <value>5</value>
+                    </level>
                     <languageOfInstruction>pl</languageOfInstruction>
+                    <grouping typeref= "2" idref="2" />
                 </learningOpportunityInstance>
             </specifies>
             <hasPart>
@@ -100,7 +253,9 @@ NCP implementers can add line breaks (or double line breaks) within this element
                     <type>Class</type>
                     <specifies>
                         <learningOpportunityInstance>
+                            <status>passed</status>
                             <engagementHours>30</engagementHours>
+                            <grouping typeref= "1" idref="1" />
                         </learningOpportunityInstance>
                     </specifies>
                 </learningOpportunitySpecification>
@@ -113,7 +268,10 @@ NCP implementers can add line breaks (or double line breaks) within this element
                     <type>Class</type>
                     <specifies>
                         <learningOpportunityInstance>
+                            <status>passed</status>
+                            <gradingSchemeLocalId>ZAL</gradingSchemeLocalId>
                             <engagementHours>30</engagementHours>
+                            <grouping typeref= "1" idref="1" />
                             <extension>
                                 <!--  This may contain anything you want. But try to avoid it. -->
                                 <element xmlns="http://example.com/schemas/my-elmo-extension">
@@ -135,6 +293,8 @@ NCP implementers can add line breaks (or double line breaks) within this element
             <title>The importance of &lt;b<![CDATA[r> in HTML]]></title>
             <specifies>
                 <learningOpportunityInstance>
+                    <status>passed</status>
+                    <gradingSchemeLocalId>AM</gradingSchemeLocalId>
                     <resultLabel>C</resultLabel>
                     <resultDistribution>
                         <category count="3" label="F"/>
@@ -144,27 +304,68 @@ NCP implementers can add line breaks (or double line breaks) within this element
                         <category count="37" label="B"/>
                         <category count="7" label="A"/>
                     </resultDistribution>
+                    <attachments>
+                        <ref>12345678</ref>
+                        <ref>87654321</ref>
+                    </attachments>
                 </learningOpportunityInstance>
             </specifies>
         </learningOpportunitySpecification>
         <issueDate>2015-10-31T07:00:00+02:00</issueDate>
+        <gradingScheme localId="ZAL">
+            <description xml:lang="en">Pass/Fail (non-graded pass)</description>
+            <description xml:lang="pl">Zaliczenie</description>
+        </gradingScheme>
+        <gradingScheme localId="AM">
+            <description xml:lang="en">American grading scale</description>
+            <description xml:lang="pl">Skala ocen amerykańska</description>
+        </gradingScheme>
+        <gradingScheme localId="0-100">
+            <description xml:lang="en">A number of the scale from 0.0 to 100.0 (one digit of precision)</description>
+            <description xml:lang="pl">Liczba od 0.0 do 100.0 (z jednym miejscem po przecinku)</description>
+        </gradingScheme>
         <attachment>
             <title xml:lang="en">Transcript of records</title>
             <type>Transcript of Records</type>
             <content>data:application/pdf;base64,iiNhz6QfDnnDybjHLBF2...</content>
         </attachment>
         <attachment>
+            <identifier type="internal">87654321</identifier>
             <title xml:lang="en">Some other attachment</title>
             <type>Certificate of Training</type>
             <description xml:lang="en">Additional multiline description...</description>
+            <description xml:lang="pl">Po polsku...</description>
             <content>data:application/pdf;base64,iiNhz6QfDnnDybjHLBF2...</content>
         </attachment>
     </report>
     <attachment>
+        <identifier type="internal">12345678</identifier>
         <title xml:lang="en">"Global" attachment</title>
+        <title xml:lang="pl">"Globalny" załącznik</title>
         <type>EMREX transcript</type>
-        <content>data:application/pdf;base64,iiNhz6QfDnnDybjHLBF2...</content>
+        <content xml:lang="en">data:application/pdf;base64,iiNhz6QfDnnDybjHLBF2...</content>
+        <content xml:lang="pl">data:application/pdf;base64,iiNhz6QfDnnDybjHLBF2...</content>
     </attachment>
+    <groups>
+        <groupType id="1">
+            <title xml:lang="en">By category</title>
+            <group id="1" sortingKey="1">
+                <title xml:lang="en">Mandatory subjects</title>
+            </group>
+            <group id="2" sortingKey="2">
+                <title xml:lang="en">Optional subjects</title>
+            </group>
+        </groupType>
+        <groupType id="2">
+            <title xml:lang="en">By subject level</title>
+            <group id="1" sortingKey="1">
+                <title xml:lang="en">Master courses</title>
+            </group>
+            <group id="2" sortingKey="2">
+                <title xml:lang="en">Bachelor courses</title>
+            </group>
+        </groupType>
+    </groups>
     <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
         <SignedInfo>
             <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
